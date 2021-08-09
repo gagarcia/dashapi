@@ -11,7 +11,7 @@
           </div>
           <div class="row">
             <div id="chart">
-              <apexchart type="line" height="350" width="400" :options="chartOptions" :series="series"></apexchart>
+              <apexchart type="line" height="350" width="360" :options="chartOptions" :series="series"></apexchart>
             </div>
           </div>
         </div>
@@ -34,10 +34,10 @@ export default {
         data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
       }],
       responsive: [{
-        breakpoint: 480,
+        breakpoint: 400,
         options: {
           chart: {
-            width: 370
+            width: 350
           },
           legend: {
             position: 'bottom'
