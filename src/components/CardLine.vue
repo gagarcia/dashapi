@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-md row items-start q-gutter-md">
+  <div class="container q-px-xm q-py-md items-start">
     <q-card class="my-card">
       <q-card-section>
         <div class="column justify-start">
@@ -9,9 +9,9 @@
           <div class="row justify-start">
             <p class="text-h4 h4">R$ 84,000.00</p>
           </div>
-          <div class="row">
+          <div class="row full-width">
             <div id="chart">
-              <apexchart type="line" height="350" width="360" :options="chartOptions" :series="series"></apexchart>
+              <apexchart type="area" :options="chartOptions" :series="series"></apexchart>
             </div>
           </div>
         </div>
@@ -31,13 +31,13 @@ export default {
     return {
       series: [{
         name: 'Desktops',
-        data: [10, 41, 35, 51, 49, 62, 69, 91, 148]
+        data: [10.000, 15.543, 12.789, 13.690, 30.000, 20.000, 15.000, 25.000, 30.345]
       }],
       responsive: [{
         breakpoint: 400,
         options: {
           chart: {
-            width: 350
+            width: '100%'
           },
           legend: {
             position: 'bottom'
@@ -46,8 +46,12 @@ export default {
       }],
       chartOptions: {
         chart: {
-          height: 350,
-          type: 'line',
+          toolbar: {
+            show: false
+          },
+          height: 300,
+          width: '100%',
+          type: 'area',
           zoom: {
             enabled: false
           }
@@ -62,13 +66,24 @@ export default {
           align: 'left'
         },
         grid: {
-          row: {
-            colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
-            opacity: 0.5
-          }
+          show: false
+          // row: {
+          //   colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+          //   opacity: 0.5
+          // }
         },
         xaxis: {
+          labels: {
+            show: false
+          },
+          show: false,
           categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep']
+        },
+        yaxis: {
+          labels: {
+            show: false
+          },
+          show: false
         }
       }
 
