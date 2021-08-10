@@ -1,9 +1,12 @@
 <template>
     <q-card class="my-card">
-        <div class="row justify-between">
+        <div class="row justify-between q-pa-sm no-wrap">
             <div class="column">
                 <div class="text-h6">{{ titulo }}</div>
                 <div class="text-subtitle1">{{ subtitulo }}</div>
+            </div>
+            <div class="column">
+              <LineChart />
             </div>
             <div class="column justify-center">
                 <div>
@@ -17,6 +20,7 @@
 
 <script>
 import PctVar from './PctVar.vue'
+import LineChart from './LineChart.vue'
 
 export default {
   name: 'Api',
@@ -36,7 +40,8 @@ export default {
     }
   },
   components: {
-    PctVar
+    PctVar,
+    LineChart
   },
   data () {
     return {

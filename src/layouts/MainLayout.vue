@@ -51,6 +51,19 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
   {
+    title: 'Cotações',
+    // caption: 'quasar.dev',
+    icon: 'shop',
+    link: ''
+  },
+  {
+    title: 'Lista de APIs',
+    caption: 'Lista de APIs em produção',
+    icon: 'list',
+    link: '#/listaapis'
+  },
+
+  {
     title: 'Docs',
     caption: 'quasar.dev',
     icon: 'list',
